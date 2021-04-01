@@ -1,8 +1,11 @@
-from python:slim 
+from python:slim
 
-copy . /opt
+workdir /opt
 
-run pip3 install -r /opt/requirements.txt
+copy . .
 
-entrypoint gunicorn -b 0.0.0.0:$PORT --pythonpath /opt main:app
+run pip3 install -r requirements.txt && \
+ python3 -m unittest echo_test.py
+
+entrypoint gunicorn -b 0.0.0.0:$PORT main:app
 

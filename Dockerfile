@@ -14,7 +14,7 @@ from app as tester
 
 copy *_test.py .
 
-run python3 -m unittest discover -p *_test.py
+run python3 -m unittest discover -s . -p "*_test.py"
 
 
 from app

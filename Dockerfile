@@ -1,11 +1,23 @@
-from python:slim
+from python:slim as env
 
-workdir /opt
+copy requirements.txt .
 
-copy . .
+run pip3 install -r requirements.txt
 
-run pip3 install -r requirements.txt && \
- python3 -m unittest echo_test.py
+
+from env as app
+
+copy *[^test].py .
+
+
+from app as tester
+
+copy *_test.py .
+
+run python3 -m unittest discover -p *_test.py
+
+
+from app
 
 entrypoint gunicorn -b 0.0.0.0:$PORT main:app
 

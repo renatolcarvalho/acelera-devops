@@ -17,7 +17,7 @@ If it works, you'll be able to check it with
 echo $(curl -s http://localhost:8888/ping/$RANDOM)
 ```
 
-You should see __pong:__ followd by a random number as the output.
+You should see __pong:__ followed by a random number as the output.
 
 
 ## Google Build Steps

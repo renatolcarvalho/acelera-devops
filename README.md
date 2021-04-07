@@ -14,7 +14,7 @@ docker run -d -e PORT=8888 -p 8888:8888 acelera-devops
 If it works, you'll be able to check it with 
 
 ```shell
-echo $(curl -s __http://localhost:8888/ping/$RANDOM)
+echo $(curl -s http://localhost:8888/ping/$RANDOM)
 ```
 
 You should see __pong:__ followd by a random number as the output.

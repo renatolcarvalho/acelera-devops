@@ -44,3 +44,5 @@ You should see __pong:__ followed by a random number as the output.
 8. Install Cloud Build in GitHub
     - Using connect to repository from Google build dashboard.
 9. Create google run to read from the artifacts and configure the continuous delivery.
+
+Force build.

@@ -7,12 +7,12 @@ run pip3 install -r requirements.txt
 
 from env as app
 
-copy *[^test].py .
+copy *[^test].py ./
 
 
 from app as tester
 
-copy *_test.py .
+copy *_test.py ./
 
 run python3 -m unittest discover -s . -p "*_test.py"
 

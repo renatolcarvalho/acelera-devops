@@ -11,4 +11,4 @@ app.add_url_rule("/failing", view_func=failing.failing, methods=["GET"])
 
 @app.route("/health")
 def health():
-  return "Success"
+  return "HTTP: 200"

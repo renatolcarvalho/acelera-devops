@@ -19,7 +19,6 @@ echo $(curl -s http://localhost:8888/ping/$RANDOM)
 
 You should see __pong:__ followed by a random number as the output.
 
-
 ## Google Build Steps
 
 ### Services
@@ -33,7 +32,7 @@ You should see __pong:__ followed by a random number as the output.
 3. Initializing the gcloud sdk
     - `gcloud init`
 4. Creating new Docker repository
-    - `	gcloud artifacts repositories create quickstart-docker-repo --repository-format=docker --location=us-central1 --description="Docker repository"`
+    - `gcloud artifacts repositories create acelera-repo --repository-format=docker --location=us-central1 --description="Acelera Docker Repository"`
 5. Retrieving the project id
     - `gcloud config get-value project`
     - "acelera-308720"
